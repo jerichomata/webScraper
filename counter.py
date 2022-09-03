@@ -50,6 +50,7 @@ with open('tweets_df2.csv', encoding="utf-8") as csvfile:
     print(keywords)
 
 with open('dictionary.csv', 'w') as csvfile:
+    csvfile.write("Word,Frequency\n")
     for key in keywords.keys():
         csvfile.write("%s,%s\n"%(key,keywords[key]))
     for key in sorted_dict.keys():

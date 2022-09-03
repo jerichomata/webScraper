@@ -2,7 +2,7 @@ import snscrape.modules.twitter as sntwitter
 import pandas as pd
 import time, sys
 
-query = ' vestibular headache OR vestibular migraine OR vestibular OR migraine since:2000-01-01 until:2022-04-14 lang:"en" '
+query = ' vestibular headache OR vestibular migraine OR vestibular OR migraine since:2000-01-01 until:2022-09-01 lang:"en" '
 tweets = []
 limit = sys.maxsize
 counter = 0
@@ -24,4 +24,4 @@ print("Completed in %s seconds" % (time.time() - start_time))
 
 df = pd.DataFrame(tweets, columns=['Datetime', 'Tweet ID', 'Username', 'Content', 'URL'])
 
-df.to_csv('tweets_df.csv')
+df.to_csv('tweets_df2.csv')
